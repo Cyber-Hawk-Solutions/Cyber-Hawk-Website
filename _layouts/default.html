@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+  <head lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
+    {% include head.html %}
+  </head>
+
+  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
+    
+    {% include masthead.html %}
+    
+    <div class="initial-content">
+      {{ content }}
+    </div>
+
+    <div class="page__footer">
+      <footer>
+        {% include footer.html %}
+      </footer>
+    </div>
+
+    {% include script.html %}
+
+  </body>
+</html>
